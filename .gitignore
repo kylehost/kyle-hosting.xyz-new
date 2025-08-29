@@ -1,5 +1,7 @@
 *.php
-*.xml
 *.java
 *.py
 .private
+templates/
+vendor/
+.idea/
