@@ -3,4 +3,3 @@ As afformentioned in the previous repository none of the backend code will be av
 ```
 PHP or Backend files, Downloadables (products or resources), Confidential/Copywrite material (material we may not fully own)
 ```
-#### We follow a one party consent law, in the case that only we have the power to revoke the public's access to any specific material at any one time!
