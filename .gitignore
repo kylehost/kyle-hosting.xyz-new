@@ -2,5 +2,4 @@
 *.xml
 *.java
 *.py
-*.lts
 .private
