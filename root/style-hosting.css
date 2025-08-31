@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 50px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.hosting-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hosting-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+.hosting-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.hosting-card.web:hover {
+  border-color: #4caf50;
+}
+
+.hosting-card.game:hover {
+  border-color: #ff5722;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.web .card-icon {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+}
+
+.game .card-icon {
+  background: linear-gradient(135deg, #ff5722, #e64a19);
+}
+
+.hosting-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.hosting-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.features {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.feature i {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.select-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.web .select-btn {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+}
+
+.game .select-btn {
+  background: linear-gradient(135deg, #ff5722, #e64a19);
+}
+
+.select-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  color: white;
+  margin-top: 50px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .hosting-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hosting-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+}

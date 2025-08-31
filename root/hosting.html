@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Hosting - Web & Game Hosting Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kyle Hosting</h1>
+            <p>Professional Hosting Solutions for Your Digital Needs</p>
+        </div>
+
+        <div class="hosting-options">
+            <div class="hosting-card web" onclick="selectHosting('web')">
+                <div class="card-icon">🌐</div>
+                <h2>Web Hosting</h2>
+                <p>Fast, reliable hosting for your websites and web applications with enterprise-grade performance and security.</p>
+                
+                <div class="features">
+                    <div class="feature">⚡ 99.9% Uptime Guarantee</div>
+                    <div class="feature">🛡️ Free SSL Certificates</div>
+                    <div class="feature">🚀 SSD Storage & CDN</div>
+                    <div class="feature">📊 24/7 Technical Support</div>
+                </div>
+                
+                <button class="select-btn">Choose Web Hosting</button>
+            </div>
+
+            <div class="hosting-card game" onclick="selectHosting('game')">
+                <div class="card-icon">🎮</div>
+                <h2>Game Hosting</h2>
+                <p>Optimized game servers with low latency and high performance for the best gaming experience possible.</p>
+                <div class="features">
+                    <div class="feature">⚡ Low Latency Network</div>
+                    <div class="feature">🔄 Automatic Backups</div>
+                    <div class="feature">🎯 DDoS Protection</div>
+                    <div class="feature">🔧 Easy Mod Support</div>
+                </div>
+                
+                <button class="select-btn">Choose Game Hosting</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Kyle Hosting. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function selectHosting(type) {
+            if (type === 'web') {
+                window.location.href = 'https://webhost.kyle-hosting.xyz';
+            } else if (type === 'game') {
+                window.location.href = 'https://pelican.kyle-hosting.xyz';
+            }
+        }
+        document.querySelectorAll('.hosting-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const type = this.classList.contains('web') ? 'web' : 'game';
+                selectHosting(type);
+            });
+        });
+    </script>
+</body>
+</html>
+
