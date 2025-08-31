@@ -1,2 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
 
-This will soon be a webpage!
+<head>
+  <title>Hosthub - Web Hosting Free Bootstrap Website Template</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Google Fonts ================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500&family=Raleway:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+
+  <!-- script ================================================== -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+
+  <!-- scroll-top section -->
+  <div id="scroll-top-btn" class="bg-white rounded-pill text-primary position-fixed">
+    <iconify-icon icon="ph:arrow-up-light" class="scroll-icon p-2 pb-0"></iconify-icon>
+  </div>
+
+  <!-- Nav Section Starts -->
+  <header id="navigation">
+    <nav class="navbar navbar-expand-lg position-absolute px-0 px-md-4 py-4 ">
+
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html"><img src="images/hosthub.png" alt=""></a>
+
+        <button class="navbar-toggler text-white shadow-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span>
+            <iconify-icon icon="quill:hamburger" class="navbar-icon"></iconify-icon>
+          </span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav container align-items-center px-5 ">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase px-4 text-light" href="index.html">Home </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase px-4 text-light text-center dropdown-toggle" data-bs-toggle="dropdown"
+                  href="#" role="button" aria-expanded="false">Hosting<iconify-icon
+                    icon="material-symbols:arrow-drop-down"></iconify-icon></a>
+                <ul class="dropdown-menu">
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">Shared Hosting
+
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">VPS Hosting
+                      <span class="badge bg-success">Popular</span></a></li>
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">Dedicated Hosting
+
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">Cloud Hosting
+
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">Email Hosting
+
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">Shared Wordpress Hosting
+                      <span class="badge bg-danger">Hot</span></a></li>
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">Wordpress Hosting
+
+                  <li><a href="hosting.html" class="dropdown-item text-uppercase">WooCommerce Hosting
+                      <span class="badge bg-primary">New</span></a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase px-4 text-light" href="blog.html">Blog </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase px-4 text-light" href="support.html">Support </a>
+              </li>
+
+              <a href="https://templatesjungle.gumroad.com/l/hosthub-web-hosting-websitye-template"
+                class="text-uppercase px-4 text-light fw-bolder">GET PRO</a>
+
+            </ul>
+            <ul class="navbar-nav justify-content-end align-items-center mt-4 mb-2 mt-lg-0 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase px-5 text-light" href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Login </a>
+              </li>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing">
+                        <nav>
+                          <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+                            <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
+                              id="nav-sign-in-tab" data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button"
+                              role="tab" aria-controls="nav-sign-in" aria-selected="true">Log
+                              In</button>
+                            <button class="btn btn-outline-primary text-uppercase px-4 py-2" id="nav-register-tab"
+                              data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab"
+                              aria-controls="nav-register" aria-selected="false">Sign
+                              Up</button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab">
+                            <form id="form1" class="form-group flex-wrap p-3 ">
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="exampleInputEmail1"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                  Address</label>
+                                <input type="text" id="exampleInputEmail1" name="email" placeholder="Email"
+                                  class="form-control ps-3">
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="inputPassword1"
+                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
+                                <input type="password" id="inputPassword1" placeholder="Password"
+                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
+                                <div id="passwordHelpBlock" class="form-text text-center">
+                                  <a href="#" class=" password">Forgot Password ?</a>
+                                </div>
+
+                              </div>
+                              <label class="py-3">
+                                <input type="checkbox" required="" class="d-inline">
+                                <span class="label-body text-black">Remember Me</span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Log
+                                  In</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade" id="nav-register" role="tabpanel"
+                            aria-labelledby="nav-register-tab">
+                            <form id="form2" class="form-group flex-wrap p-3 ">
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="exampleInputEmail2"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                  Address</label>
+                                <input type="text" id="exampleInputEmail2" name="email" placeholder="Email"
+                                  class="form-control ps-3">
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="inputPassword2"
+                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
+                                <input type="password" id="inputPassword2" placeholder="Password"
+                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
+                              </div>
+                              <label class="py-3">
+                                <input type="checkbox" required="" class="d-inline">
+                                <span class="label-body text-black">I agree to the <a href="#"
+                                    class="text-black password border-bottom">Privacy
+                                    Policy</a>
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Sign
+                                  Up</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <div class="d-flex align-items-center justify-content-center ">
+              <button type="button" class="btn btn-primary">
+                <span class="btnText">Get Started</span>
+                <span class="btnTwo">
+                  <iconify-icon icon="prime:arrow-right" class="btn-arrow"></iconify-icon>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section Starts -->
+  <section id="hero">
+    <div class="image-holder position-relative">
+      <img src="images/pattern.png" alt="banner" class="img-fluid">
+    </div>
+    <div class="hero container position-absolute  top-50 start-50 translate-middle pb-5 " data-aos="fade-up"
+      data-aos-easing="ease-in-sine">
+      <div class="row align-items-center g-5 py-5">
+        <div class=" col-lg-6">
+          <h6>Hosthub Hosting</h6>
+          <h1 class=" text-capitalize text-light my-3">Fast & secure hosting for any websites.</h1>
+          <p class="text-light mb-4">Sed et lorem eget quam eget pulvinar viverra egestas aliquam. Dolor suspendisse
+            adipiscing in vel
+            sodales luctus arcu. Laculis eget dictum suspendisse urna euismod. Diam volutpat turpis at
+            vitae. </p>
+
+          <div class="">
+
+            <button type="button" class="btn btn-primary me-3 mb-2">
+              <span class="btnText">Choose your plans</span>
+              <span class="btnTwo">
+                <iconify-icon icon="prime:arrow-right" class="btn-arrow"></iconify-icon>
+              </span>
+            </button>
+
+            <button type="button" class="btn btn-outline-primary hero-btn-outline-primary mb-2"> Learn more </button>
+          </div>
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="images/hero.png" class=" d-none d-lg-block img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- brand section starts  -->
+  <section id="brands" class="container-fluid brand-block ">
+    <div class=" brand-names d-lg-flex justify-content-between ">
+      <img class=" mb-5 mb-lg-0 me-4 " src="images/zokotec.png" alt="">
+      <img class=" mb-5 mb-lg-0 me-4 " src="images/landises.png" alt="">
+      <img class=" mb-5 mb-lg-0 me-4 " src="images/hostmate.png" alt="">
+      <img class=" mb-5 mb-lg-0 me-4 " src="images/mazec.png" alt="">
+    </div>
+  </section>
+
+  <!-- steps section starts  -->
+  <section id="steps">
+    <div class="container my-5 pt-5" data-aos="fade-up" data-aos-easing="ease-in-sine">
+      <h2 class="text-capitalize text-center mt-5 ">Three easy steps</h2>
+      <div class="row py-4">
+        <div class="col-md-4 mt-4">
+          <div class="step-post text-center  px-5">
+            <div class="step-icon mb-3">
+              <iconify-icon class="iconify-step" style="background: #5399F4 ;"
+                icon="mdi:download-circle-outline"></iconify-icon>
+            </div>
+            <h3 class=" ">Start by integrating</h3>
+            <p class=" ">In tortor amet fringilla sed porta nec sempe odio consectetur vitae.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="step-post text-center  px-5">
+            <div class="step-icon mb-3">
+              <iconify-icon class="iconify-step" style="background: #F5C037 ;"
+                icon="mdi:folder-file-outline"></iconify-icon>
+            </div>
+            <h3 class=" ">Get the preview</h3>
+            <p class=" ">Tempor eu congue semper odio dolor tincidunt posuere tellus donec.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="step-post text-center  px-5">
+            <div class="step-icon mb-3">
+              <iconify-icon class="iconify-step" style="background: #F58737 ;" icon="mdi:cog-outline"></iconify-icon>
+            </div>
+            <h3 class=" ">Share your work</h3>
+            <p class=" ">Morbi habitant diam nulla tincidunt corper sollicitudin consect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about section starts  -->
+  <section id="about">
+    <div class="hero container my-5">
+      <div class="row  align-items-center g-5 py-5">
+        <div class="  col-10 col-sm-8 col-lg-6">
+          <img src="images/about.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+        <div class=" col-lg-6" data-aos="fade-up" data-aos-easing="ease-in-sine">
+          <h6>Hosthub web host</h6>
+          <h2 class=" text-capitalize  my-3">Best web hosting with trusted services</h2>
+          <p class="pb-5">Enim vel sed aliquet in eget eros neque nam. Gravida sodales bibendum quam neque lacus
+            ullamcorper
+            est ut. Bibendum neque eget sed sed faucibus egestas duis ullamcorper. Nibh adipiscing sit sagittis nunc
+            aliquet sit. </p>
+
+          <div class="">
+            <button type="button" class="btn btn-outline-primary">Get Started</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- feature section starts  -->
+  <section id="feature">
+    <div class="container py-5">
+      <h2 class="text-capitalize text-center pt-5 pb-3 my-5">HostHub core Features</h2>
+      <div class="row row-cols-2 row-cols-sm-3 pb-5 " data-aos="fade-up" data-aos-easing="ease-in-sine">
+        <div class="col align-items-start pb-4">
+          <iconify-icon class="feature-icon" icon="mdi:cellphone-cog"></iconify-icon>
+          <div>
+            <h3 class="">Easy to setup</h3>
+            <p class="">Mi luctus sed ut auctor sit. Enim vel sed aliquet in eget eros amet fringilla sed porta nec
+              neque.
+            </p>
+          </div>
+        </div>
+        <div class="col align-items-start pb-4">
+          <iconify-icon class="feature-icon" icon="mdi:nas"></iconify-icon>
+          <div>
+            <h3 class="">SSD storage</h3>
+            <p>Enim vel sed aliquet in eget eros amet fringilla sed porta nec neque nam. Luctus sed ut auctor sit.
+            </p>
+          </div>
+        </div>
+        <div class="col align-items-start pb-4">
+          <iconify-icon class="feature-icon" icon="mdi:lock-check"></iconify-icon>
+          <div>
+            <h3 class="">Secured & trusted</h3>
+            <p>Gravida sodales bibendum quam neque. Mi luctus sed ut auctor sit. Enim vel sed aliquet in eget eros.
+            </p>
+          </div>
+        </div>
+        <div class="col align-items-start pb-4">
+          <iconify-icon class="feature-icon" icon="mdi:database"></iconify-icon>
+          <div>
+            <h3 class="">Unlimited Database</h3>
+            <p>Gravida sodales bibendum quam neque. Mi luctus sed ut auctor sit. Enim vel sed aliquet in egetamet.
+            </p>
+          </div>
+        </div>
+        <div class="col align-items-start pb-4">
+          <iconify-icon class="feature-icon" icon="mdi:server-security"></iconify-icon>
+          <div>
+            <h3 class="">Cloud server & VPS</h3>
+            <p>Sed ut auctor sit. Enim vel sed aliquet in eget eros amet fringilla sed porta nec neque nam.
+            </p>
+          </div>
+        </div>
+        <div class="col align-items-start pb-4">
+          <iconify-icon class="feature-icon" icon="mdi:comment-question"></iconify-icon>
+          <div>
+            <h3 class="">Customer support</h3>
+            <p>Vel sed aliquet in eget eros amet fringilla sed porta nec neque nam. Luctus sed ut auctor sit.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- about2 section starts  -->
+  <section id="about2">
+    <div class="hero container  py-5 my-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="  col-10 col-sm-8 col-lg-6">
+          <img src="images/about2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+        <div class=" col-lg-6" data-aos="fade-up" data-aos-easing="ease-in-sine">
+          <h6>Ready for</h6>
+          <h2 class=" text-capitalize  my-3">Scalable performance management</h2>
+          <p class="mb-5">Gravida sodales bibendum quam neque lacus ullamcorper est ut. Bibendum neque eget sed sed
+            faucibus
+            egestas duis enim vel sed aliquet in eget eros neque nam ullamcorper nibh adipiscing sit sagittis nunc
+            aliquet sit. </p>
+
+          <div class="">
+            <button type="button" class="btn btn-outline-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- testimonial section starts  -->
+  <section id="testimonial">
+    <div class="container">
+      <h2 class="text-capitalize text-center my-5">Our customer’s reviews</h2>
+      <div class="swiper testimonial-swiper" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="300">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card testimonials-inner">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text mb-4">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus
+                      ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.”
+                    </p>
+                    <div class=" row testimonial-details ">
+                      <p class="col-md-8 testimonial-name">Jacob Miller - Feb 22, 2023</p>
+                      <div class="col-md-4 rating ">
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-half"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-outline"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card testimonials-inner">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text mb-4">“Feugiat hac porttitor sem dictum velit, elementum odio. Sed ipsum quis
+                      nec eget facilisis. Quis nibh ut bibendum nisl quis placerat proin tortor mattis in neque.”</p>
+                    <div class=" row testimonial-details ">
+                      <p class="col-md-8 testimonial-name">Kelly Garcia - Feb 23, 2023</p>
+                      <div class="col-md-4 rating ">
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-half"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-outline"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card testimonials-inner">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text mb-4">“Quis nibh ut bibendum nisl quis placerat proin tortor mattis in neque.
+                      Feugiat hac porttitor sem dictum velit, eleme nisl quis placerat ntum odio sed eget facilisis.”
+                    </p>
+                    <div class=" row testimonial-details ">
+                      <p class="col-md-8 testimonial-name">Anny Grey - Feb 20, 2023</p>
+                      <div class="col-md-4 rating ">
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-half"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-outline"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card testimonials-inner">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text mb-4">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus
+                      ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.”
+                    </p>
+                    <div class=" row testimonial-details ">
+                      <p class="col-md-8 testimonial-name">Jacob Miller - Feb 22, 2023</p>
+                      <div class="col-md-4 rating ">
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-half"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-outline"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card testimonials-inner">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text mb-4">“Feugiat hac porttitor sem dictum velit, elementum odio. Sed ipsum quis
+                      nec eget facilisis. Quis nibh ut bibendum nisl quis placerat proin tortor mattis in neque.”</p>
+                    <div class=" row testimonial-details ">
+                      <p class="col-md-8 testimonial-name">Kelly Garcia - Feb 23, 2023</p>
+                      <div class="col-md-4 rating ">
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-half"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-outline"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card testimonials-inner">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text mb-4">“Quis nibh ut bibendum nisl quis placerat proin tortor mattis in neque.
+                      Feugiat hac porttitor sem dictum velit, eleme nisl quis placerat ntum odio sed eget facilisis.”
+                    </p>
+                    <div class=" row testimonial-details ">
+                      <p class="col-md-8 testimonial-name">Anny Grey - Feb 20, 2023</p>
+                      <div class="col-md-4 rating ">
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-half"></iconify-icon>
+                        <iconify-icon class="testimonial-icon" icon="ion:star-outline"></iconify-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination position-unset mt-4"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- price-plan section starts  -->
+  <section id="price-plan">
+    <div class="container py-5 my-5">
+
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 class="text-capitalize text-center mt-5">Choose your hosting plan</h2>
+          <p class="text-center">Egestas duis enim vel sed aliquet in eget eros neque nam ullamcorper nibh adipin eget
+            eros neque namiscing sit sagittis nunc aliquet sit. </p>
+        </div>
+      </div>
+
+      <div class="row py-4">
+        <div class="col-12 col-md-6 col-lg-3 pb-4" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="0">
+          <div class="  pt-5 pb-4 plan-post text-center">
+
+            <h6>Essential</h6>
+
+            <div class="d-flex my-4 justify-content-center ">
+              <p class="dollar">$</p>
+              <p class="plan-cost">5&nbsp;</p>
+              <p class="month pt-3">/month</p>
+            </div>
+
+            <div class="mb-5">
+              <button type="button" class="btn btn-outline-primary">Select</button>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>1 website</p>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>10 GB storage</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free domain</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free SSL</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free email</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Daily Backup</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited bandwidth</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated resources</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated IP Address</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 pb-4" data-aos="fade-up" data-aos-easing="ease-in-sine"
+          data-aos-delay="300">
+          <div class="  pt-5 pb-4 plan-post text-center">
+
+            <h6>starter</h6>
+
+            <div class="d-flex my-4 justify-content-center ">
+              <p class="dollar">$</p>
+              <p class="plan-cost">8&nbsp;</p>
+              <p class="month pt-3">/month</p>
+            </div>
+
+            <div class="mb-5">
+              <button type="button" class="btn btn-outline-primary">Select</button>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>10 website</p>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>100 GB storage</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free domain</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free SSL</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free email</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Daily Backup</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited bandwidth</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated resources</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated IP Address</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 pb-4" data-aos="fade-up" data-aos-easing="ease-in-sine"
+          data-aos-delay="600">
+          <div class="  pt-5 pb-4 plan-post text-center" style="background: #F2F6FB ;">
+
+            <h6>pro</h6>
+
+            <div class="d-flex my-4 justify-content-center ">
+              <p class="dollar">$</p>
+              <p class="plan-cost">10&nbsp;</p>
+              <p class="month pt-3">/month</p>
+            </div>
+
+            <div class="mb-5">
+              <button type="button" class="btn btn-outline-primary plan-btn-outline-primary ">Select</button>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited</p>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>250 GB storage</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free domain</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free SSL</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free email</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Daily Backup</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited bandwidth</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated resources</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated IP Address</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 pb-4" data-aos="fade-up" data-aos-easing="ease-in-sine"
+          data-aos-delay="900">
+          <div class="  pt-5 pb-4 plan-post text-center">
+
+            <h6>ultimate</h6>
+
+            <div class="d-flex my-4 justify-content-center ">
+              <p class="dollar">$</p>
+              <p class="plan-cost">19&nbsp;</p>
+              <p class="month pt-3">/month</p>
+            </div>
+
+            <div class="mb-5">
+              <button type="button" class="btn btn-outline-primary">Select</button>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited</p>
+            </div>
+
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited storage</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free domain</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free SSL</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Free email</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Daily Backup</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Unlimited bandwidth</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated resources</p>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <p class="plan-right">✓&nbsp;</p>
+              <p>Dedicated IP Address</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- Blog Section Starts -->
+  <section id="blog">
+    <div class="container py-5">
+      <h2 class="text-center  my-5">Learn our blogs</h2>
+
+      <div class="row g-4">
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="0">
+          <div class="artical-post">
+            <div class="">
+              <a href="single-post.html" class="blog-img"><img src="images/blog2.png" alt="" class="img-fluid"></a>
+            </div>
+            <div class="p-4">
+              <h3><a href="single-post.html" class="blog-link">Learn and stay updated</a></h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="300">
+          <div class="artical-post">
+            <div class="">
+              <a href="single-post.html" class="blog-img"><img src="images/blog1.png" alt="" class="img-fluid"> </a>
+            </div>
+            <div class="p-4">
+              <h3><a href="single-post.html" class="blog-link"> Cloud Data Security </a> </h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="600">
+          <div class="artical-post">
+            <div class="">
+              <a href="single-post.html" class="blog-img"><img src="images/blog3.png" alt="" class="img-fluid"></a>
+            </div>
+            <div class="p-4">
+              <h3><a href="single-post.html" class="blog-link"> More on shared hosting </a> </h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting Ipsum has been the industry's standard
+                dummy text ever since</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-5">
+        <button type="button" class="btn btn-outline-primary">Read blogs</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section Starts -->
+  <section id="faq">
+
+    <div class="container my-5 py-5 ">
+      <h2 class="text-center  mb-5">Frequently asked questions</h2>
+
+
+      <div class="accordion col-md-10 offset-md-1" id="accordionPanelsStayOpenExample">
+
+        <div class="accordion-item mt-3" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="0">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne">
+              What is web hosting and server exactly?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>Diam orci gravida convallis at enim risus viverra. Hac mi tristique in aliquet tincidunt nam lectus
+                nec. Placerat interdum auctor facilisi massa laoreet hendrerit posuere a. Tristique ultricies consectetu
+                at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mt-3" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="200">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo">
+              How to know which hosting service provider is best?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              <p>Diam orci gravida convallis at enim risus viverra. Hac mi tristique in aliquet tincidunt nam lectus
+                nec. Placerat interdum auctor facilisi massa laoreet hendrerit posuere a. Tristique ultricies consectetu
+                at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mt-3" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="400">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree">
+              What are the special features of hosthub?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              <p>Diam orci gravida convallis at enim risus viverra. Hac mi tristique in aliquet tincidunt nam lectus
+                nec. Placerat interdum auctor facilisi massa laoreet hendrerit posuere a. Tristique ultricies consectetu
+                at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mt-3" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="600">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour">
+              Is there any refund service for buyers?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body">
+              <p>Diam orci gravida convallis at enim risus viverra. Hac mi tristique in aliquet tincidunt nam lectus
+                nec. Placerat interdum auctor facilisi massa laoreet hendrerit posuere a. Tristique ultricies consectetu
+                at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mt-3" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="800">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFive">
+              Basic tips or information to keep in mind?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body">
+              <p>Diam orci gravida convallis at enim risus viverra. Hac mi tristique in aliquet tincidunt nam lectus
+                nec. Placerat interdum auctor facilisi massa laoreet hendrerit posuere a. Tristique ultricies consectetu
+                at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mt-3" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="900">
+          <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseSix">
+              Basic tips or information to keep in mind?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingSix">
+            <div class="accordion-body">
+              <p>Diam orci gravida convallis at enim risus viverra. Hac mi tristique in aliquet tincidunt nam lectus
+                nec. Placerat interdum auctor facilisi massa laoreet hendrerit posuere a. Tristique ultricies consectetu
+                at.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Action Section Starts -->
+  <section id="action">
+    <div class="container my-5 py-5">
+      <div class="text-center py-5 " data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="600">
+        <h6>Free trial</h6>
+        <h1 class=" text-capitalize mb-3">Try Hosthub for free</h1>
+        <p class="">It is very easy to integrate in your site or apps. </p>
+        <div class="">
+
+
+          <button type="button" class="btn btn-primary">
+            <span class="btnText">Get started now</span>
+            <span class="btnTwo">
+              <iconify-icon icon="prime:arrow-right" class="btn-arrow"></iconify-icon>
+            </span>
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Starts -->
+  <section id="footer">
+    <div class="container footer-container mt-5">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
+
+        <div class="col-md-3 ">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Company</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">About us </a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Our team </a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Terms & Condition </a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Privacy Policy </a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Careers </a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Cloud computing </a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 ">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Information</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Recommend</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Online guide</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">start guide</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Network</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Affiliate</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">agency partner</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 ">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Support </a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Help center</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">c-panel</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">security</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">hosthub</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">contact</a></li>
+            <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">our info</a></li>
+          </ul>
+        </div>
+
+        <div class=" col-md-3 mt-5 mt-md-0 ">
+          <img src="images/hosthubfooter.png" alt="">
+          <p class="my-4">HTML Website By:<a href="https://templatesjungle.com/" class="website-link" target="_blank">
+              <b><u>TemplatesJungle</u></b></a></p>
+        </div>
+
+      </footer>
+    </div>
+
+
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 pt-4">
+        <div class="col-md-10 d-flex align-items-center">
+          <a href="#" class="pb-2">General terms & conditions</a>
+
+        </div>
+        <div class="col-md-2 d-flex align-items-center justify-content-between">
+          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
+          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:twitter"></iconify-icon></a>
+          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:youtube"></iconify-icon></a>
+
+        </div>
+
+      </footer>
+    </div>
+  </section>
+
+
+  <!-- script ================================================== -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+
+
+</body>
+
+</html>

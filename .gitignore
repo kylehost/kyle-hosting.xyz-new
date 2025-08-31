@@ -1,7 +1,9 @@
-*.php
 *.java
 *.py
 .private
 templates/
 vendor/
 .idea/
+config.php
+.env
+/env
