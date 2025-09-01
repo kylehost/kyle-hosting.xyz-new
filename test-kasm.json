@@ -1,0 +1,51 @@
+{
+  "_comment": "Egg for kasmweb/kasmos-desktop VNC desktop",
+  "name": "Kasmos Desktop",
+  "author": "YourName",
+  "description": "Kasmos Desktop container with VNC access on port 6901",
+  "docker_image": "kasmweb/kasmos-desktop:1.17.0",
+  "startup": "/bin/sh -c 'echo Starting Kasmos Desktop && sleep infinity'",
+  "config": {
+    "files": {},
+    "logs": {
+      "custom": "/var/log/kasmos.log"
+    }
+  },
+  "variables": [
+    {
+      "name": "VNC_PW",
+      "description": "VNC password",
+      "env_variable": "VNC_PW",
+      "default_value": "password",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string"
+    },
+    {
+      "name": "SHM_SIZE",
+      "description": "Shared memory size",
+      "env_variable": "SHM_SIZE",
+      "default_value": "512m",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string"
+    },
+    {
+      "name": "VNC_PORT",
+      "description": "VNC port to expose",
+      "env_variable": "VNC_PORT",
+      "default_value": "6901",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|numeric|port"
+    }
+  ],
+  "stop": "^C",
+  "ports": [
+    {
+      "container_port": 6901,
+      "host_port": "{{VNC_PORT}}",
+      "protocol": "tcp"
+    }
+  ]
+}

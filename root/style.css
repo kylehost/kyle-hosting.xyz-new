@@ -56,6 +56,9 @@ h2,
 
 }
 
+.underline {
+  text-decoration: underline;
+}
 
 h1,
 .h1 {

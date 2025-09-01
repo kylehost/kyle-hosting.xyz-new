@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyle Hosting - Web & Game Hosting Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-hosting.css">
 </head>
 <body>
     <div class="container">
@@ -25,10 +25,8 @@
                     <div class="feature">🚀 SSD Storage & CDN</div>
                     <div class="feature">📊 24/7 Technical Support</div>
                 </div>
-                
                 <button class="select-btn">Choose Web Hosting</button>
             </div>
-
             <div class="hosting-card game" onclick="selectHosting('game')">
                 <div class="card-icon">🎮</div>
                 <h2>Game Hosting</h2>
@@ -39,31 +37,50 @@
                     <div class="feature">🎯 DDoS Protection</div>
                     <div class="feature">🔧 Easy Mod Support</div>
                 </div>
-                
+                <button class="select-btn">Choose Game Hosting</button>
+            </div>
+            <div class="hosting-card game" onclick="selectHosting('vnc')">
+                <div class="card-icon">🏢</div>
+                <h2>VNC Hosting</h2>
+                <p>Optimized workstations low latency for the best workspace possible.</p>
+                <div class="features">
+                    <div class="feature">⚡ Low Latency Network</div>
+                    <div class="feature">⛈️ Redundancy Guaranteed</div>
+                    <div class="feature">📃 Pre-Installed Software</div>
+                    <div class="feature">🔧 Easy to use Design</div>
+                </div>
                 <button class="select-btn">Choose Game Hosting</button>
             </div>
         </div>
-
         <div class="footer">
             <p>&copy; 2024 Kyle Hosting. All rights reserved.</p>
         </div>
     </div>
-
-    <script>
-        function selectHosting(type) {
-            if (type === 'web') {
-                window.location.href = 'https://webhost.kyle-hosting.xyz';
-            } else if (type === 'game') {
-                window.location.href = 'https://pelican.kyle-hosting.xyz';
-            }
+<script>
+    function selectHosting(type) {
+        if (type === 'web') {
+            window.location.href = 'https://webhost.kyle-hosting.xyz';
+        } else if (type === 'vnc') {
+            window.location.href = 'https://vnc.kyle-hosting.xyz';
+        } else if (type === 'game') {
+            window.location.href = 'https://pelican.kyle-hosting.xyz';
         }
-        document.querySelectorAll('.hosting-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const type = this.classList.contains('web') ? 'web' : 'game';
+    }
+    document.querySelectorAll('.hosting-card').forEach(card => {
+        card.addEventListener('click', function() {
+            let type = null;
+            if (this.classList.contains('web')) {
+                type = 'web';
+            } else if (this.classList.contains('vnc')) {
+                type = 'vnc';
+            } else if (this.classList.contains('game')) {
+                type = 'game';
+            }
+            if (type) {
                 selectHosting(type);
-            });
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>
-
