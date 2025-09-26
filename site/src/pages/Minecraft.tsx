@@ -1,22 +1,22 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { 
-  featuresConfig,
-  contentConfig,
   gamesConfig,
-  getEnabledItems,
   isSectionEnabled 
 } from "../../siteconfig";
 import * as Icons from "lucide-react";
 
 const Minecraft = () => {
-  const enabledFeatures = getEnabledItems(featuresConfig.whyChooseUs.features);
-  const minecraftGame = gamesConfig.games.find(game => game.id === 'minecraft');
-  const minecraftPlans = minecraftGame?.plans || [];
+  const minecraftGame = gamesConfig.games.find(game => game.id === 'minecraft') || {
+    name: 'Minecraft',
+    description: 'Build, explore, and survive in infinite worlds with our high-performance servers, instant modpack installation, and 24/7 expert support.',
+    icon: '⛏️',
+    plans: []
+  };
+  const minecraftPlans = minecraftGame.plans || [];
 
   const minecraftFeatures = [
     {
@@ -69,65 +69,55 @@ const Minecraft = () => {
     { name: "Bedrock", description: "Cross-platform compatibility" }
   ];
 
+  // Fallback for CTA if contentConfig is not available
+  const ctaConfig = {
+    title: "Ready to Start Mining?",
+    secondaryButton: { text: "View All Games", target: "/games" }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-blue-900">
-      {/* Hero Section */}
-      {isSectionEnabled('minecraft', 'hero') && (
-        <section 
-          className="relative bg-gradient-to-br from-green-900 via-emerald-800 to-green-900 text-white py-20 lg:py-32 overflow-hidden"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1920&h=1080&fit=crop')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundBlendMode: "overlay"
-          }}
-        >
-          <div className="absolute inset-0 bg-green-900/80"></div>
+      {/* Hero Section - Simplified with radial gradients like Garry's Mod */}
+      {isSectionEnabled('gamePages', 'hero') && (
+        <section className="relative bg-gradient-to-br from-green-900 via-slate-800 to-green-900 text-white py-20 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(34,197,94,0.4),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(59,130,246,0.3),transparent_50%)]"></div>
           
-          {/* Animated background elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/4 w-60 h-60 bg-emerald-500/10 rounded-full blur-2xl animate-bounce delay-500"></div>
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center animate-fade-in">
-              <div className="text-6xl mb-6 animate-bounce">{minecraftGame?.icon || '🟫'}</div>
-              <Badge className="mb-4 bg-green-600/20 text-green-300 border-green-500/50 animate-scale-in delay-200">
-                #1 Minecraft Hosting Provider
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent animate-fade-in delay-300">
-                {minecraftGame ? `${minecraftGame.name} Server Hosting` : 'Minecraft Server Hosting'}
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in delay-500">
-                {minecraftGame?.description || 'Create the ultimate Minecraft experience with our high-performance servers, instant modpack installation, and 24/7 expert support.'}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-700">
-                <Link to="/games">
-                  <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    Explore Plans
-                    <Icons.ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300">
-                  <Icons.Play className="mr-2 h-5 w-5" />
-                  Live Demo
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="text-6xl mb-6">{minecraftGame.icon}</div>
+            <Badge className="mb-4 bg-green-600/20 text-green-300 border-green-500/50">
+              #1 Minecraft Hosting Provider
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+              {minecraftGame.name} Server Hosting
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              {minecraftGame.description}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/games">
+                <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  Explore Plans
+                  <Icons.ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </div>
-              <p className="mt-4 text-sm text-gray-400">
-                ✅ 7-day free trial • ✅ No setup fees • ✅ 99.9% uptime guarantee
-              </p>
+              </Link>
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300">
+                <Icons.Play className="mr-2 h-5 w-5" />
+                Live Demo
+              </Button>
             </div>
+            <p className="mt-4 text-sm text-gray-400">
+              ✅ 7-day free trial • ✅ No setup fees • ✅ 99.9% uptime guarantee
+            </p>
           </div>
         </section>
       )}
 
-      {/* Minecraft Block Plans */}
-      {isSectionEnabled('minecraft', 'pricing') && minecraftPlans.length > 0 && (
+      {/* Plans Section - Matched to Garry's Mod styling */}
+      {minecraftPlans.length > 0 && isSectionEnabled('gamePages', 'plans') && (
         <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 animate-fade-in">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                 Minecraft Block Plans
               </h2>
@@ -140,13 +130,12 @@ const Minecraft = () => {
               {minecraftPlans.map((plan, index) => (
                 <Card 
                   key={plan.id} 
-                  className={`relative border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105 hover:-translate-y-2 group animate-fade-in ${
+                  className={`relative border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105 hover:-translate-y-2 group ${
                     plan.popular ? 'ring-2 ring-green-500 scale-105' : ''
                   }`}
-                  style={{ animationDelay: `${index * 150}ms` }}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-1">Most Popular</Badge>
                     </div>
                   )}
@@ -195,10 +184,10 @@ const Minecraft = () => {
       )}
 
       {/* Features Section */}
-      {isSectionEnabled('minecraft', 'features') && (
+      {isSectionEnabled('gamePages', 'features') && (
         <section className="py-20 bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 animate-fade-in">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                 Everything You Need for Minecraft
               </h2>
@@ -211,8 +200,7 @@ const Minecraft = () => {
               {minecraftFeatures.map((feature, index) => (
                 <Card 
                   key={index} 
-                  className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105 hover:-translate-y-2 group animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105 hover:-translate-y-2 group"
                 >
                   <CardHeader>
                     <div className="flex items-center space-x-4">
@@ -235,95 +223,94 @@ const Minecraft = () => {
       )}
 
       {/* Server Types */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-              Choose Your Server Type
-            </h2>
-            <p className="text-xl text-gray-300">
-              We support all popular Minecraft server software and versions
-            </p>
+      {isSectionEnabled('gamePages', 'serverTypes') && (
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-blue-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+                Choose Your Server Type
+              </h2>
+              <p className="text-xl text-gray-300">
+                We support all popular Minecraft server software and versions
+              </p>
+            </div>
+
+            <Tabs defaultValue="versions" className="w-full">
+              <TabsList className="grid w-full grid-cols-2 mb-8 bg-slate-800 border-slate-600">
+                <TabsTrigger value="versions" className="data-[state=active]:bg-green-600">Server Software</TabsTrigger>
+                <TabsTrigger value="mods" className="data-[state=active]:bg-green-600">Popular Mods</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="versions">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {serverVersions.map((version, index) => (
+                    <Card 
+                      key={index} 
+                      className="hover:shadow-lg transition-all duration-300 cursor-pointer group bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105"
+                    >
+                      <CardContent className="p-6">
+                        <h3 className="font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
+                          {version.name}
+                        </h3>
+                        <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors">{version.description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="mods">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {popularMods.map((mod, index) => (
+                    <Card 
+                      key={index} 
+                      className="hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105"
+                    >
+                      <CardContent className="p-6">
+                        <div className="flex justify-between items-start mb-2">
+                          <h3 className="font-semibold text-white">{mod.name}</h3>
+                          <Badge variant="secondary" className="bg-green-600/20 text-green-300 border-green-500/50">{mod.category}</Badge>
+                        </div>
+                        <p className="text-gray-300 text-sm">{mod.downloads} downloads</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
+        </section>
+      )}
 
-          <Tabs defaultValue="versions" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 bg-slate-800 border-slate-600">
-              <TabsTrigger value="versions" className="data-[state=active]:bg-green-600">Server Software</TabsTrigger>
-              <TabsTrigger value="mods" className="data-[state=active]:bg-green-600">Popular Mods</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="versions">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {serverVersions.map((version, index) => (
-                  <Card 
-                    key={index} 
-                    className="hover:shadow-lg transition-all duration-300 cursor-pointer group bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
-                        {version.name}
-                      </h3>
-                      <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors">{version.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="mods">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {popularMods.map((mod, index) => (
-                  <Card 
-                    key={index} 
-                    className="hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 transform hover:scale-105"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <CardContent className="p-6">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-semibold text-white">{mod.name}</h3>
-                        <Badge variant="secondary" className="bg-green-600/20 text-green-300 border-green-500/50">{mod.category}</Badge>
-                      </div>
-                      <p className="text-gray-300 text-sm">{mod.downloads} downloads</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      {isSectionEnabled('minecraft', 'cta') && (
+      {/* CTA Section - With fallback */}
+      {isSectionEnabled('gamePages', 'cta') && (
         <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
           
-          {/* Animated background elements */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-bounce"></div>
             <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
-            <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl animate-bounce delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl animate-bounce" style={{animationDelay: '1000ms'}}></div>
           </div>
           
           <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="text-6xl mb-6 animate-bounce">⛏️</div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
-              {contentConfig.cta.title}
+            <div className="text-6xl mb-6">⛏️</div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              {ctaConfig.title}
             </h2>
-            <p className="text-xl mb-8 text-gray-300 animate-fade-in delay-300">
+            <p className="text-xl mb-8 text-gray-300">
               Join over 500,000 Minecraft players who trust GameHost Pro for their server hosting. 
               Start your adventure today with our 7-day free trial!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-500">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/games">
-                <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-0">
+                <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                   Start Your Server
                 </Button>
               </Link>
-              <Link to={contentConfig.cta.secondaryButton.target}>
-                <Button size="lg" className="bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 text-white border-slate-500 hover:border-slate-400 px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  {contentConfig.cta.secondaryButton.text}
+              <Link to={ctaConfig.secondaryButton.target}>
+                <Button size="lg" className="bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  {ctaConfig.secondaryButton.text}
                 </Button>
               </Link>
             </div>
