@@ -18,7 +18,7 @@ export const gamesConfig = {
       players: "1-200 players",
       icon: "🟫",
       popular: true,
-      enabled: false,
+      enabled: true,
       hasPage: true,
       features: ["Instant setup", "Mod support", "Auto backups", "24/7 uptime"],
       category: "Survival",
